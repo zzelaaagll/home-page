@@ -107,7 +107,7 @@ $(function () {
 	$("body").on("mouseout click", function () {
 		hibernate.init();
 	});
-	$(".login>button").click(function(){
+	$(".login-button").click(function(){
 		check();
 	});
 	$(".gate").click(function(){
