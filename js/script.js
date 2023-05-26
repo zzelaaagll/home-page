@@ -48,12 +48,10 @@ $(function () {
 	function openGate () {
 		showLoginInput();
 		$(".gate").css({display:"none"});
-		$(".login-input").focus();
-		$(".login-input").val("");
 		hibernate.start();
 	}
 	function closeGate () {
-		showLoginInput();
+		$(".login").css({display:"none"});
 		$(".gate").css({display:"block"});
 		$(".login-input").blur();
 		$(".login-input").val("");
@@ -117,7 +115,7 @@ $(function () {
 		showLoginInput();
 	});
 	$(".login-input").blur(function () {
-		if ($(".login").css("display") !== "none") {
+		if ($(".login").css("display") === "block") {
 			$(".login-input").focus();
 		}
 	});
