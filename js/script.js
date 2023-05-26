@@ -7,7 +7,7 @@ $(function () {
 		}
 		,getToday: function () {
 			let date = new Date();
-			return date.getMonth() + "月" + date.getDate() + "日";
+			return (date.getMonth() + 1) + "月" + date.getDate() + "日";
 		}
 		,getWeek: function () {
 			let date = new Date();
