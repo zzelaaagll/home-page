@@ -28,5 +28,9 @@ function encrypt (json, key, iv) {
 }
 
 function base64Decode (txt) {
-	return {pw: "\u590f\u6d1b\u7279\u70e6\u607c", u: "#"};
+	if (txt !== null && txt !== "") {
+		return {pw: "\u590f\u6d1b\u7279\u70e6\u607c", u: "#"};
+	}else {
+		return "";
+	}
 }
