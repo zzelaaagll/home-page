@@ -3,27 +3,50 @@
 	<head>
 		<title>探索の位面 - The Planes of Exploration</title>
 		<meta charset="utf-8">
-		<script type="text/javascript">
-			// window.location.href="https://explor.planes.eu.org/";
-		</script>
-		<style type="text/css">
-			html,body {
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="./img/avatar.jpg" rel="shortcut icon"/>
+    	<script src="./js/jquery-3.7.0.min.js"></script>
+	    <script type="text/javascript">
+			var b64 = "5aW95Y6J5a6z77yB56uf54S26KKr5L2g54yc5Yiw5a+G56CB5piv44CQbWFkb25nbWVp44CR44CC";
+			function login () {
+				var data = base64Decode(b64);
+				if ($(".login-input").val() === data.pw) {
+					window.location.href = data.u;
+				}
+			}
+			$(function () {
+				$(".login-input").keyup(function (e) {
+					if (e.keyCode === 13) {
+						login();
+					}
+				});
+				$(".login-button").click(function () {
+					login();
+				});
+			});
+	    </script>
+	    <style type="text/css">
+	    	html,body {
 				margin: 0;
 				padding: 0;
 				border: 0;
 				width: 100%;
 				height: 100%;
+				background-image: url(../img/bg.jpg);
+				font-family: Microsoft JhengHei
 			}
 			.main {
-				position: relative;
+				position: absolute;
 				width: 100%;
+				z-index: 999;
 			}
 			.avatar {
 				position: relative;
-				width: 200px;
-				height: 200px;
-				background-image: url(./image/avatar.jpg);
-				background-size: 200px 200px;
+				width: 180px;
+				height: 180px;
+				background-image: url(../img/avatar.jpg);
+				background-size: 180px 180px;
 				left: 0;
 				right: 0;
 				margin-left: auto;
@@ -42,36 +65,117 @@
 				text-align: center;
 			}
 			.login-input {
-				width: 300px;
+				width: 245px;
 				height: 30px;
 				border: 2px #999 solid;
-				font-size: 26px;
+				font-size: 20px;
+				padding-left: 10px;
+				padding-right: 42px;
 			}
 			.login-input:focus {
 				outline: none;
 			}
-			.bg {
+			.login>button {
+				position: absolute;
+				margin-top: 2px;
+				margin-left: -34px;
+				width: 32px;
+				height: 32px;
+				background-color: #555;
+				color: #fff;
+				border: none;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.mask {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: #000;
+				background-color: rgba(0, 0, 0, 0.75);
+				backdrop-filter: blur(10px);
+			}
+			.gate {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				z-index: 9999;
+				background-color: #000;
+				background-image: url(../img/bg.jpg);
+				color: #fff;
+				margin-top: -21px;
+			}
+			.gate-mask {
 				position: absolute;
 				width: 100%;
 				height: 100%;
 				background-color: #000;
-				opacity: 0.3; 
-				top: 0;
-				bottom: 0;
-				z-index: -999;
+				opacity: 0.75;
+				z-index: 88888;
 			}
-		</style>
+			.show-time {
+				position: absolute;
+				z-index: 99999;
+				left: 30px;
+				bottom: 30px;
+			}
+			.show-time>p {
+				margin: 20px;
+			}
+			.show-time>p:nth-child(1) {
+				font-size: 75px;
+			}
+			.show-time>p:nth-child(2) {
+				font-size: 40px;
+			}
+			.login-no-password {
+				display: none;
+				margin-top: 20px;
+				text-align: center;
+				color: #fff;
+			}
+			.login-no-password>p {
+				margin-bottom: 30px;
+			}
+			.login-no-password>p>button {
+				width: 85px;
+				height: 35px;
+				font-size: 14px;
+				background-color: #555;
+				border: 2px #fff solid;
+				color: #fff;
+			}
+	    </style>
 	</head>
 
-	<body>
+	<body onselectstart="return false" onselect="document.selection.empty()">
 		<div class="main">
 			<div class="avatar"></div>
-			<div class="username">调查员D★ubleZ</div>
-			<div class="login"><input type="password" value="" class="login-input" /></div>
+			<div class="username">D★ubleZ</div>
+			<div class="login">
+				<input type="password" value="" class="login-input" onselectstart="" onselect="" placeholder="密码" />
+				<button class="login-button">→</button>
+			</div>
+			<div class="login-no-password">
+				<p>密码不正确。请再试一次。</p>
+				<p><button>确定</button></p>
+			</div>
 		</div>
-		<div class="bg"></div>
+		<div class="mask"></div>
+		<div class="gate">
+			<div class="gate-mask"></div>
+			<div class="show-time">
+				<p></p>
+				<p></p>
+			</div>
+		</div>
 	</body>
-	<script type="text/javascript">
-
-	</script>
+    <script src="./js/crypto-js.min.js"></script>
+    <script src="./js/md5.js"></script>
+    <script src="./js/tool.js"></script>
+    <script src="./js/script.js"></script>
 </html>
