@@ -1,4 +1,4 @@
-String.prototype.aesDecode = function (str, key, iv) {
+window.aesDecode = function (str, key, iv) {
 
 	try {
 		const bytes = CryptoJS.AES.decrypt(str, CryptoJS.enc.Utf8.parse(key), {
@@ -13,7 +13,7 @@ String.prototype.aesDecode = function (str, key, iv) {
 	}
 }
 
-String.prototype.aesEncode = function (json, key, iv) {
+window.aesEncode = function (json, key, iv) {
 
 	try {
 		const plaintext = JSON.stringify(json);
