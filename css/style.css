@@ -5,7 +5,7 @@ html,body {
 	width: 100%;
 	height: 100%;
 	background-image: url(../img/bg.jpg);
-	font-family: Microsoft JhengHei
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Lato,Roboto,"PingFang SC","Microsoft JhengHei","Microsoft YaHei",sans-serif;
 }
 .main {
 	position: absolute;
@@ -34,6 +34,7 @@ html,body {
 .login {
 	margin-top: 50px;
 	text-align: center;
+	display: none;
 }
 .login-input {
 	width: 245px;
@@ -46,7 +47,7 @@ html,body {
 .login-input:focus {
 	outline: none;
 }
-.login>button {
+.login-button {
 	position: absolute;
 	margin-top: 2px;
 	margin-left: -34px;
@@ -78,7 +79,7 @@ html,body {
 	background-color: #000;
 	background-image: url(../img/bg.jpg);
 	color: #fff;
-	margin-top: -21px;
+/*				margin-top: -21px;*/
 }
 .gate-mask {
 	position: absolute;
