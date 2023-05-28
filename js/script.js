@@ -76,7 +76,7 @@ $(function () {
 	}
 	function check () {
 		let p = $(".login-input").val();
-		let d = decrypt(base, p.MD5(16), p.MD5(16));
+		let d = aesDecode(base, p.MD5(16), p.MD5(16));
 		if (d) {
 			window.location.href = d.answer;
 		}else {
