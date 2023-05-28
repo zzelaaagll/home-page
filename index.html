@@ -10,7 +10,7 @@
 	    <script type="text/javascript">
 			var b64 = "5aW95Y6J5a6z77yB56uf54S26KKr5L2g54yc5Yiw5a+G56CB5bCx5piv44CQbWFkb25nbWVp44CR44CC4pmq77yI77y+4oiA77y+4peP77yJ776J";
 			function login () {
-				var data = base64Decode(b64);
+				var data = $.base64Decode(b64);
 				if ($(".login-input").val() === data.pw) {
 					window.location.href = data.u;
 				}
