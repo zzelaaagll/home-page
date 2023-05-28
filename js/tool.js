@@ -1,5 +1,16 @@
 
+// 恭喜你找到这里，然而并没有什么用╮(๑•́ ₃•̀๑)╭
+function base64Decode (txt) {
+
+	if (txt !== undefined && txt !== "") {
+		return {pw: "\u590f\u6d1b\u7279\u70e6\u607c", u: "#"};
+	}else {
+		return "";
+	}
+}
+
 function decrypt (str, key, iv) {
+
 	try {
 		const bytes = CryptoJS.AES.decrypt(str, CryptoJS.enc.Utf8.parse(key), {
 		  iv: CryptoJS.enc.Utf8.parse(iv),
@@ -14,6 +25,7 @@ function decrypt (str, key, iv) {
 }
 
 function encrypt (json, key, iv) {
+
 	try {
 		const plaintext = JSON.stringify(json);
 		const ciphertext = CryptoJS.AES.encrypt(plaintext, CryptoJS.enc.Utf8.parse(key), {
@@ -23,14 +35,6 @@ function encrypt (json, key, iv) {
 		});
 		return ciphertext.toString();
 	}catch (e) {
-		return "";
-	}
-}
-
-function base64Decode (txt) {
-	if (txt !== undefined && txt !== "") {
-		return {pw: "\u590f\u6d1b\u7279\u70e6\u607c", u: "#"};
-	}else {
 		return "";
 	}
 }
