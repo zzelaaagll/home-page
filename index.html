@@ -7,13 +7,13 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="./img/avatar.jpg" rel="shortcut icon"/>
     	<script src="./js/jquery-3.7.0.min.js"></script>
-    	<script src="./js/tool.js"></script>
+    	<script src="./js/base64tool.js"></script>
 	    <script type="text/javascript">
-			var base64 = "5aW95Y6J5a6z77yB56uf54S26KKr5L2g54yc5Yiw5a+G56CB5bCx5piv44CQbWFkb25nbWVp44CR44CC4pmq77yI77y+4oiA77y+4peP77yJ776J";
+			var base64 = "eyJwYXNzd29yZCI6Im1hZG9uZ21laSIsInVybCI6Imh0dHBzOi8vcGxhbmVzLmV1Lm9yZy9sb2dpbiJ9";
 			function login () {
 				var data = $.base64Decode(base64);
-				if ($(".login-input").val() === data.pw) {
-					window.location.href = data.u;
+				if ($(".login-input").val() === data.password) {
+					window.location.href = data.url;
 				}
 			}
 			$(function () {
@@ -178,7 +178,7 @@
 	</body>
     <script src="./js/jquery.cookie.js"></script>
     <script src="./js/crypto-js.min.js"></script>
-    <script src="./js/md5.js"></script>
-    <script src="./js/aes.js"></script>
+    <script src="./js/MD5.js"></script>
+    <script src="./js/AES.js"></script>
     <script src="./js/script.js"></script>
 </html>
