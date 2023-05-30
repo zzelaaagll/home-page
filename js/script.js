@@ -1,5 +1,5 @@
 $(function () {
-	var base = "THGrrlc3zawzZthwZXGYPik7xR3UdU/x4BqnpWaSDKNqYNbRTtSEuFjnmb9xdNyq";
+	var base = "JnuIJGe45ywOmLfzcBMITYMMcm9vBPpTM8tCuoPE5kh/y36c5Od5mVS4RRkqN+CqYJwR9svuarDIeiHd+UjsjnzrjfrdpRwABVkNxAwz13r8FtKKqQqFhx8wGq+nXuqTptbG/bA5UGbjpiK+KZh/R/Qgt/qRk2ljnP4eVVRQ8gU=";
 	var newDate = {
 		getTime: function () {
 			let date = new Date();
@@ -78,7 +78,13 @@ $(function () {
 		let p = $(".login-input").val();
 		let d = aesDecode(base, p.MD5(16), p.MD5(16));
 		if (d) {
-			window.location.href = d.answer;
+			$.cookie(d.key, d.value, {
+				expires: d.expires, 
+				path: '/', 
+				domain: d.domain, 
+				secure: true
+			});
+			window.location.href = d.url;
 		}else {
 			showNoPassword();
 		}
