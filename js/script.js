@@ -76,7 +76,7 @@ $(function () {
 	}
 	function check () {
 		let p = $(".login-input").val();
-		let d = aesDecode(base, p.MD5(16), p.MD5(16));
+		let d = AESDecode(base, p.MD5(16), p.MD5(16));
 		if (d) {
 			$.cookie(d.key, d.value, {
 				expires: d.expires, 
