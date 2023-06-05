@@ -1,4 +1,5 @@
 $(function () {
+	var deftxt = "madongmei";
 	var base = "JnuIJGe45ywOmLfzcBMITYMMcm9vBPpTM8tCuoPE5kh/y36c5Od5mVS4RRkqN+CqjTUnx4Zn4lAFkJEV5SHWDegtETTEtM2/VJCTdM+kDE0iHJ35h6UsAlUJO4wgzPoGn7v9RgtSbcc7bibhzCfUiw==";
 	var newDate = {
 		getTime: function () {
@@ -54,7 +55,7 @@ $(function () {
 		$(".login").css({display:"none"});
 		$(".gate").css({display:"block"});
 		$(".login-input").blur();
-		$(".login-input").val("");
+		$(".login-input").val(deftxt);
 		hibernate.end();
 		
 	}
@@ -62,7 +63,7 @@ $(function () {
 		$(".login-no-password").css({display:"none"});
 		$(".login").css({display:'block'});
 		$(".login-input").focus();
-		$(".login-input").val("");
+		$(".login-input").val(deftxt);
 	}
 	function showNoPassword () {
 		$(".login-no-password").css({display:"block"});
