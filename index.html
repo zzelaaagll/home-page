@@ -5,9 +5,10 @@
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="./img/avatar.jpg" rel="shortcut icon"/>
-    	<script src="./js/jquery-3.7.0.min.js"></script>
-    	<script src="./js/base64tool.js"></script>
+		<link href="/img/avatar.jpg" rel="shortcut icon"/>
+    	<link href="/css/style.css" rel="stylesheet"/>
+    	<script src="/js/jquery-3.7.0.min.js"></script>
+    	<script src="/js/base64tool.js"></script>
 	    <script type="text/javascript">
 			var base64 = "eyJwYXNzd29yZCI6Im1hZG9uZ21laSIsInVybCI6Imh0dHBzOi8vcGxhbmVzLmV1Lm9yZy9lbnRlci5odG1sIn0=";
 			function login () {
@@ -28,21 +29,6 @@
 			});
 	    </script>
 	    <style type="text/css">
-	    	html,body {
-				margin: 0;
-				padding: 0;
-				border: 0;
-				width: 100%;
-				height: 100%;
-				background-image: url(/img/bg.jpg);
-				background-position: center center;
-				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Lato,Roboto,"PingFang SC","Microsoft JhengHei","Microsoft YaHei",sans-serif;
-			}
-			.main {
-				position: absolute;
-				width: 100%;
-				z-index: 999;
-			}
 			.avatar {
 				position: relative;
 				width: 180px;
@@ -90,18 +76,6 @@
 				font-size: 16px;
 				font-weight: bold;
 			}
-			.mask {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-/*				background-color: #000;*/
-				background-color: rgba(2, 2, 2, 0.65);
-				backdrop-filter: blur(10px);
-			}
 			.gate {
 				position: fixed;
 				width: 100%;
@@ -111,7 +85,6 @@
 				background-image: url(../img/bg.jpg);
 				background-position: center center;
 				color: #fff;
-/*				margin-top: -21px;*/
 			}
 			.gate-mask {
 				position: absolute;
@@ -159,7 +132,7 @@
 	<body onselectstart="return false" onselect="document.selection.empty()">
 		<div class="main">
 			<div class="avatar"></div>
-			<div class="username">D★ubleZ</div>
+			<div class="username">Ph★en!X</div>
 			<div class="login">
 				<input type="password" value="" class="login-input" onselectstart="" onselect="" placeholder="密码" />
 				<button class="login-button">→</button>
@@ -178,9 +151,9 @@
 			</div>
 		</div>
 	</body>
-    <script src="./js/jquery.cookie.js"></script>
-    <script src="./js/crypto-js.min.js"></script>
-    <script src="./js/MD5.js"></script>
-    <script src="./js/AES.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/crypto-js.min.js"></script>
+    <script src="/js/MD5.js"></script>
+    <script src="/js/AES.js"></script>
+    <script src="/js/script.js"></script>
 </html>
