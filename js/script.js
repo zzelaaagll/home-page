@@ -1,6 +1,6 @@
 $(function () {
-	var deftxt = "madongmei";
-	var base = "JnuIJGe45ywOmLfzcBMITYMMcm9vBPpTM8tCuoPE5kh/y36c5Od5mVS4RRkqN+CqjTUnx4Zn4lAFkJEV5SHWDegtETTEtM2/VJCTdM+kDE0iHJ35h6UsAlUJO4wgzPoGn7v9RgtSbcc7bibhzCfUiw==";
+	var deftxt = "yanerdaoling";
+	var base = "/gOB/7TYu0de12gj9m9yYTsfxTyiw9vh1rnsN666l79EzPBPzIQlHd09T06EAyTj4NnTpW/2//nL6bG/GejSF28pVOoBArvKIxY9hJwXfgpNz2r+if3H8Waf9hxhRXR+RQwVm2z1iNCKd8q185Tqhw==";
 	var newDate = {
 		getTime: function () {
 			let date = new Date();
