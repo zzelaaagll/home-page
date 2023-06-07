@@ -1,5 +1,5 @@
 $(function () {
-	var deftxt = "yanerdaoling";
+	var deftxt = "";
 	var base = "/gOB/7TYu0de12gj9m9yYTsfxTyiw9vh1rnsN666l79EzPBPzIQlHd09T06EAyTj4NnTpW/2//nL6bG/GejSF28pVOoBArvKIxY9hJwXfgpNz2r+if3H8Waf9hxhRXR+RQwVm2z1iNCKd8q185Tqhw==";
 	var newDate = {
 		getTime: function () {
