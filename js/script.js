@@ -1,6 +1,29 @@
 $(function () {
+	var urlstate = 1;
 	var deftxt = "";
-	var base = "/gOB/7TYu0de12gj9m9yYTsfxTyiw9vh1rnsN666l79EzPBPzIQlHd09T06EAyTj4NnTpW/2//nL6bG/GejSF28pVOoBArvKIxY9hJwXfgqXU1dNjpr4NEXnedjH6ocB5wPcMtcEA7aZl146kwPLwH4kisXd7Xj095kcS1lgtSQ=";
+	var base = "/gOB/7TYu0de12gj9m9yYTsfxTyiw9vh1rnsN666l79EzPBPzIQlHd09T06EAyTj4NnTpW/2//nL6bG/GejSFydIhdxcjYc+nJMKDnvaPnd300k27CcJvajZMUAEIJN36zOEAYX1TLyLzF2rHrD7S7h/yIiTK4ixc6vQkTNo9dBGfwbuP4j/UZ4HbrKLuNr5O/7At7P72UDJ2Qp58WQhJPxH8J5XCOSenLpo8A/x92Y=";
+	var hibernate = {
+		time: 0,
+		timer: null,
+		start: function () {
+			clearTimeout(hibernate.timer);
+			hibernate.timer = setTimeout(function () {
+				hibernate.time++;
+				if (hibernate.time >= 10) {
+					closeGate();
+				}else {
+					hibernate.start();
+				}
+			}, 1000);
+		},
+		end: function () {
+			clearTimeout(hibernate.timer);
+			hibernate.init();
+		},
+		init: function () {
+			hibernate.time = 0;
+		}
+	};
 	var newDate = {
 		getTime: function () {
 			let date = new Date();
@@ -22,28 +45,6 @@ $(function () {
 				case 5: return "星期五";
 				case 6: return "星期六";
 			}
-		}
-	};
-	var hibernate = {
-		time: 0,
-		timer: null,
-		start: function () {
-			clearTimeout(hibernate.timer);
-			hibernate.timer = setTimeout(function () {
-				hibernate.time++;
-				if (hibernate.time >= 10) {
-					closeGate();
-				}else {
-					hibernate.start();
-				}
-			}, 1000);
-		},
-		end: function () {
-			clearTimeout(hibernate.timer);
-			hibernate.init();
-		},
-		init: function () {
-			hibernate.time = 0;
 		}
 	};
 	function openGate () {
@@ -85,7 +86,7 @@ $(function () {
 				domain: d.domain, 
 				secure: true
 			});
-			window.location.href = d.url;
+			window.location.href = d["url_" + urlstate];
 		}else {
 			showNoPassword();
 		}
