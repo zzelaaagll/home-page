@@ -1,7 +1,6 @@
 $(function () {
-	var urlstate = 1;
 	var deftxt = "";
-	var base = "/gOB/7TYu0de12gj9m9yYTsfxTyiw9vh1rnsN666l79EzPBPzIQlHd09T06EAyTj4NnTpW/2//nL6bG/GejSFydIhdxcjYc+nJMKDnvaPnd300k27CcJvajZMUAEIJN36zOEAYX1TLyLzF2rHrD7S7h/yIiTK4ixc6vQkTNo9dBGfwbuP4j/UZ4HbrKLuNr5O/7At7P72UDJ2Qp58WQhJPxH8J5XCOSenLpo8A/x92Y=";
+	var base = "/gOB/7TYu0de12gj9m9yYTsfxTyiw9vh1rnsN666l79EzPBPzIQlHd09T06EAyTj4NnTpW/2//nL6bG/GejSF28pVOoBArvKIxY9hJwXfgpNz2r+if3H8Waf9hxhRXR+RQwVm2z1iNCKd8q185Tqhw==";
 	var hibernate = {
 		time: 0,
 		timer: null,
@@ -86,7 +85,7 @@ $(function () {
 				domain: d.domain, 
 				secure: true
 			});
-			window.location.href = d["url_" + urlstate];
+			window.location.href = d.url;
 		}else {
 			showNoPassword();
 		}
